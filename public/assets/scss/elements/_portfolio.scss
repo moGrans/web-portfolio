@@ -64,8 +64,8 @@
         transition: transform .28s ease;
         z-index: 4;
         &.image-1{
-            background-image: url(/assets/images/project/portfolio.png);
-            // background-image: url(http://127.0.0.1:5000/images/aae1cf3cb358fab3f0685775655dc000.png);
+            // background-image: url(./assets/images/project/portfolio.png);
+            background-image: url(/../../../assets/images/project/portfolio.png);
         }
 
         &.image-2{

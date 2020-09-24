@@ -33,7 +33,9 @@ class ContactMe extends Component{
     handleClose = () => this.setState({show: false});
     handleOpen = (event) => {
         const IP = '3.85.1.73';
-        if (this.postData(`http://${IP}/contact`)) {
+        // const IP = '127.0.0.1';
+
+        if (this.postData(`https://${IP}/contact`)) {
             this.setState({show: true});
         }
         event.preventDefault();

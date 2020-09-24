@@ -11,6 +11,7 @@ import PortfolioListMe from "../elements/portfolio/PortfolioListMe";
 import ProgressMeLang from "../blocks/progressbar/ProgressMeLang";
 import ProgressMeService from "../blocks/progressbar/ProgressMeService";
 
+import me from "../../public/assets/images/about/about-me.jpg";
 const SlideList = [
     {
         textPosition: 'text-left',
@@ -53,7 +54,7 @@ const HomePage = () => {
                                     <div className="col-lg-12">
                                         <div className={`inner ${value.textPosition}`}>
                                             {value.category ? <span>{value.category}</span> : ''}
-                                            <h1 className="title">Hi, I’m Hao Liu <br/>
+                                            <h1 className="title">Hi, I’m Hao Liu<br/>
                                             <TextLoop>
                                                 <span> Computer Engineer. </span>
                                                 <span> Software Developer. </span>
@@ -68,7 +69,7 @@ const HomePage = () => {
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    ))}1
                     {/* End Single Slide */}
                 </div>
             </div>
@@ -82,7 +83,7 @@ const HomePage = () => {
                             <div className="row row--35 align-items-center">
                                 <div className="col-lg-5">
                                     <div className="thumbnail">
-                                        <img className="w-100" src="/assets/images/about/about-me.jpg" alt="About Images"/>
+                                        <img className="w-100" src={me} alt="About Images"/>
                                     </div>
                                 </div>
                                 <div className="col-lg-7">
@@ -90,9 +91,9 @@ const HomePage = () => {
                                         <div className="section-title">
                                             <h2 className="title">{title}</h2>
                                             <p className="description">{description}</p>
-                                            <a className="rn-button-style--2 btn-primary-color" href="https://1drv.ms/b/s!AlbXZCEGha5ngdpJlgjfSFNmmgU4XQ?e=yQMhNI">
+                                            {/* <a className="rn-button-style--2 btn-primary-color" href="https://1drv.ms/b/s!AlbXZCEGha5ngdpJlgjfSFNmmgU4XQ?e=yQMhNI">
                                                 <span>Download Resume</span>
-                                            </a>
+                                            </a> */}
                                         </div>
                                     </div>
                                 </div>

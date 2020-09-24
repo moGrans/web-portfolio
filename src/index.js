@@ -13,7 +13,7 @@ import * as serviceWorker from './serviceWorker';
 
 import HomePage from "./home/HomePage";
 
-class Root extends Component{
+class Root extends Component{ 
     render(){
         return(
             <BrowserRouter basename={'/'}>

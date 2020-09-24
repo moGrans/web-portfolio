@@ -3,6 +3,8 @@ import React, { Component } from "react";
 // import Axios, { axios } from "axios";
 import { Modal } from "react-bootstrap";
 
+import imgPortfolioL from "../../../public/assets/images/project/portfolio_large.png"
+
 class PortfolioListMe extends Component {
     constructor(props) {
         super(props);
@@ -13,10 +15,9 @@ class PortfolioListMe extends Component {
             projIndex: 0,
             PortfolioListContent: [
                 {
-                    image: 'image-1',
-                    imageL: '/assets/images/project/portfolio_large.png',
-                    projectUrl: '',
-                    targetUrl: 'http://localhost:3000',
+                    image: '../assets/images/project/portfolio.png',
+                    imageL: imgPortfolioL,
+                    projectUrl: 'https://github.com/moGrans/web-portfolio/tree/master',
                     imageUrl: '',
                     category: 'Development',
                     title: 'Online Portfolio',
@@ -85,7 +86,6 @@ class PortfolioListMe extends Component {
                             </h4>
                         </Modal.Header>
                         <Modal.Body>
-
                             <img src={this.state.PortfolioListContent[projIndex].imageL} alt="project"/>
                             <p style={{marginTop: '20px'}}>
                                 {this.state.PortfolioListContent[projIndex].description}
@@ -106,15 +106,15 @@ class PortfolioListMe extends Component {
                             <div className="thumbnail-inner">
                                 <div
                                     className={`thumbnail ${value.image}`}
-                                    // style={{
-                                    //     backgroundImage: `url(http://${IP}:${PORT}/capture?url=${value.targetUrl})`,
-                                    // }}
+                                    style={{
+                                        backgroundImage: `url(${this.state.PortfolioListContent[projIndex].image})`,
+                                    }}
                                 />
                                 <div
                                     className={`bg-blr-image ${value.image}`}
-                                    // style={{
-                                    //     backgroundImage: `url(http://${IP}:${PORT}/capture?url=${value.targetUrl})`,
-                                    // }}
+                                    style={{
+                                        backgroundImage: `url(${this.state.PortfolioListContent[projIndex].image})`,
+                                    }} 
                                 />
                             </div>
                             <div className="content">
@@ -125,7 +125,6 @@ class PortfolioListMe extends Component {
                                         <a className="rn-btn" 
                                             href="/portfolio-details" 
                                             onClick={ (event) => {
-                                                console.log(index);
                                                 this.setState({isOpen: true, projIndex: index});
                                                 event.preventDefault();
                                             }

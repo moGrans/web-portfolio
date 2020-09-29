@@ -32,10 +32,7 @@ class ContactMe extends Component{
     // popup
     handleClose = () => this.setState({show: false});
     handleOpen = (event) => {
-        const IP = '3.85.1.73';
-        // const IP = '127.0.0.1';
-
-        if (this.postData(`https://${IP}/contact`)) {
+        if (this.postData(`/contact`)) {
             this.setState({show: true});
         }
         event.preventDefault();
